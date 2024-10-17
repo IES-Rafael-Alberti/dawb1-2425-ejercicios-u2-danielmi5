@@ -5,27 +5,27 @@ def comprobar_num(num: str) -> int:
     if int(num) < 0:
         while num < 0:
             print ("ERROR")
-            num = int(input("Debes introducir un número positivo: ").replace(" ",""))
+            num = int(input("Debes introducir un número (positivo): ").replace(" ",""))
     if int(num) >= 0:
        return int(num)      
     return int(num)
   else:
     while num.isdigit() == False:
       print ("ERROR")
-      num = input("Debes introducir un número: ").replace(" ","")
+      num = input("Debes introducir un número (positivo): ").replace(" ","")
       if num.isdigit() == True:
         return int(num)
 
 
 def comprobar_edad(edad):
     if edad >= 18:
-       print ("Eres mayor de edad")
+       print ("Eres mayor de edad, puedes conducir.")
     else:
-       print ("Eres menor de edad")
+       print ("Eres menor de edad, no puedes conducir")
 
 def main():
     print("¿Cuál es tú edad?:")
-    edad = input("")
+    edad = input("").replace(" ","")
     edad = comprobar_num (edad)
     comprobar_edad(edad)
 if __name__ == "__main__":
