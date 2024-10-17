@@ -7,7 +7,14 @@ def comprobar_string(cadena):
     else:
         return cadena
     return cadena
-def ver_grupo(nombre, sexo):
+
+
+def main():
+    nombre = input("Introduce tu nombre: ").replace(" ","")
+    nombre = comprobar_string(nombre)
+    sexo = input("Introduce tu sexo (M/F): ").replace(" ","")
+    sexo = comprobar_string(sexo)
+    
     if sexo[0].upper() == "M":
         if nombre[0] > "N":
             print ("Perteneces al grupo A")
@@ -20,15 +27,5 @@ def ver_grupo(nombre, sexo):
             print ("perteneces al grupo B")
     else:
         print("ERROR -> Sexo incorrecto")
-    
-
-
-def main():
-    nombre = input("Introduce tu nombre: ").replace(" ","")
-    nombre = comprobar_string(nombre)
-    sexo = input("Introduce tu sexo (M/F): ").replace(" ","")
-    sexo = comprobar_string(sexo)
-    
-    ver_grupo(nombre, sexo)
 if __name__ == "__main__":
     main()

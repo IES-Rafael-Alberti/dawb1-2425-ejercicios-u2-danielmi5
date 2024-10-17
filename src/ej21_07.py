@@ -30,8 +30,10 @@ def comprobar_num(num: str) -> int:
             print("ERROR: Debes introducir un número: ")
             num = input("").replace(" ","")
         return int(num)
-
-def tipo_impositivo(renta):
+      
+def main():
+    renta = input("Introduce tu renta: ").replace(" ","")
+    renta = comprobar_num(renta)
     if renta < 10000:
         print("Tu renta es de",renta,"€ y te corresponde un tipo impositivo de 5%")
     elif renta >= 10000 and renta < 20000:
@@ -42,10 +44,5 @@ def tipo_impositivo(renta):
         print("Tu renta es de",renta,"€ y te corresponde un tipo impositivo de 30%")
     else:   
         print("Tu renta es de",renta,"€ y te corresponde un tipo impositivo de 45%")
-      
-def main():
-    renta = input("Introduce tu renta: ").replace(" ","")
-    renta = comprobar_num(renta)
-    tipo_impositivo(renta)
 if __name__ == "__main__":
     main()
