@@ -4,24 +4,30 @@ def comprobar_num(num: str) -> int:
         return int(num)
     else:
         while not num.isdigit():
+            if num.startswith("-"):
+                num = num.replace("-","",1)
+                if num.isdigit():
+                    num = "-" + num
+                    return int(num)
             print("ERROR: Debes introducir un número: ")
             num = input("").replace(" ","")
-        return int(num)
+    return int(num)
 
-def comprobar_division(num1: int, num2: int) -> float:
-    if num2 == 0:
+def comprobar_division(num: int, divisor: int) -> float:
+    if divisor == 0:
         
         return "*ERROR* --> No se puede dividir por 0"
     else: 
-        division = num1 / num2
+        division = num / divisor
         return float(division)
+        
 
 def main():
-    num1 = input("Introduce un número: ").replace(" ","")
-    num2 = input("Introduce un número: ").replace(" ","")
-    num1 = comprobar_num(num1)
-    num2 = comprobar_num(num2)
-    resultado = comprobar_division(num1, num2)
-    print( num1, " / ", num2, " = ", resultado)
+    num = input("Introduce un número: ").replace(" ","")
+    num = comprobar_num(num)
+    divisor = input("Introduce un número: ").replace(" ","")
+    divisor = comprobar_num(divisor)
+    resultado = comprobar_division(num, divisor)
+    print( num, " / ", divisor, " = ", resultado)
 if __name__ == "__main__":
     main()
