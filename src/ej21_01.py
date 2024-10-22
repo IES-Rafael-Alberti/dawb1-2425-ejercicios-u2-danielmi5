@@ -18,7 +18,5 @@ def main():
        print ("Eres mayor de edad, puedes conducir.")
     else:
        print ("Eres menor de edad, no puedes conducir")
-    
-    
 if __name__ == "__main__":
     main()

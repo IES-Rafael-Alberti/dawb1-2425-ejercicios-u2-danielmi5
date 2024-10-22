@@ -18,7 +18,7 @@ def pedir_edad() -> int:
             validar_edad(edad)
         except ValueError:
             if edad is None:
-                print("**ERROR** --> Numero equivocado, intentalo de nuevo")
+                print("**ERROR** --> Valor equivocado, intentalo de nuevo")
                 # Si salta el except la variable edad sigue valiendo None
             if edad is not None:
                 print("**ERROR**  Intentalo de nuevo")
