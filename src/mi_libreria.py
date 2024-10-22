@@ -34,3 +34,22 @@ def es_decimal(num: str) -> bool:
             return True
         else: 
             return False
+        
+
+
+def comprobar_entero(num: str) -> int:
+    if num.isdigit():
+        return int(num)
+    else: # Si entra un numero negativo, como tiene guion lo detecta como si no fuese digito
+        while not num.isdigit():
+            #compruebo si es negativo
+            if num.startswith("-"):
+                # si a partir del guion es digit, eso significa que es negativo.
+                if num[1:].isdigit():
+                    return int(num)
+                else:
+                    pass        
+            print("ERROR: Debes introducir un número entero: ")
+            num = input("").replace(" ","")
+    
+    return int(num)
