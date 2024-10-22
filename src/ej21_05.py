@@ -5,14 +5,14 @@ def comprueba_edad(num: int):
     if num < 0:
         while num < 0: 
             print ("*Error*")
-            num = comprobar_num(input("Introduce una edad valida: "))
+            num = comprobar_num(input("Introduce una edad valida: ").replace(" ",""))
     return num
 
 def comprueba_ingresos(num: float):
     if num < 0:
         while num < 0: 
             print ("*Error*")
-            num = float(comprobar_num(input("Introduce un ingreso valido: ")))
+            num = float(comprobar_num(input("Introduce un ingreso valido: ").replace(" ","")))
     return num
             
 

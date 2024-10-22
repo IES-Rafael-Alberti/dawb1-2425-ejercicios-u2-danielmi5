@@ -3,7 +3,7 @@ def comprobar_string(cadena):
     if cadena.isdigit():
         while cadena.isdigit():
             print("ERROR: Debes introducir una cadena de texto.")
-            cadena = input("Introduce una cadena: ")
+            cadena = input("Introduce una cadena: ").replace(" ","")
     else:
         return cadena
     return cadena

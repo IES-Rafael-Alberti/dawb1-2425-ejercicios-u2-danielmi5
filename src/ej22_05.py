@@ -1,11 +1,11 @@
 #Escribir un programa que pregunte al usuario una cantidad a invertir, el interés anual y el número de años, y muestre por pantalla el capital obtenido en la inversión cada año que dura la inversión.
 from mi_libreria import comprobar_num, comprobar_entero
 def pedir_datos():
-    inversion = comprobar_num(input("Cantidad a invertir: ")) 
+    inversion = comprobar_num(input("Cantidad a invertir: ").replace("","")) 
     inversion = comprobar_datos(inversion)
-    interes = comprobar_num(input("Interés porcentual anual (%):"))
+    interes = comprobar_num(input("Interés porcentual anual (%):").replace("",""))
     interes = comprobar_datos(interes)
-    num_años = comprobar_entero(input ("Número de años: "))
+    num_años = comprobar_entero(input ("Número de años: ").replace("",""))
     num_años = comprobar_datos(num_años)
     return inversion, interes, num_años
 
@@ -13,7 +13,7 @@ def comprobar_datos(dato):
     if dato < 0:
         while dato < 0:
             print("**ERROR** -> Debes introducir un dato válido (positivo):")
-            dato = input("")
+            dato = input("").replace("","")
             dato = comprobar_num(dato)
     return dato
 

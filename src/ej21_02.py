@@ -10,7 +10,7 @@ def comprobar_contraseña(respuesta: str) -> bool:
             # Cuando el intentos esté en el ultimo intento no quiero que haga nada, por eso el pass. 
             pass
         else:
-            respuesta = input("Intentalo de nuevo: ")
+            respuesta = input("Intentalo de nuevo: ").replace(" ","")
         respuesta = respuesta.lower()
         intentos -= 1
     

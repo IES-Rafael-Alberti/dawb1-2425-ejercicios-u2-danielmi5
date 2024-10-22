@@ -3,14 +3,14 @@ from mi_libreria import comprobar_entero
 
 # pide el numero y lo devuelve
 def pedir_entero():
-    entero = input("")
+    entero = input("").replace(" ","")
     return comprobar_num(comprobar_entero(entero))
 # comprueba si el número es mayor a 0
 def comprobar_num(entero):
     if entero <= 0 :
        while entero <=0:
            print("**ERROR** -> Introduce una altura válida:")
-           entero = input("")
+           entero = input("").replace(" ","")
            entero = comprobar_entero(entero)
     else:
         pass

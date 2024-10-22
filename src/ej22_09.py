@@ -8,7 +8,7 @@ def comprobar_contraseña(respuesta: str) -> bool:
     # Hasta que la respuesta no sea la contraseña no termina el bucle
     while respuesta != contraseña:
         print("Contraseña equivocada")
-        respuesta = input("Intentalo de nuevo: ")
+        respuesta = input("Intentalo de nuevo: ").replace(" ","")
         respuesta = respuesta.lower()
     # Cuando salga del bucle devuelve True
     return True

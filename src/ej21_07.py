@@ -12,7 +12,7 @@ def comprueba_renta(num: float):
     if num < 0:
         while num < 0: 
             print ("*Error*")
-            num = float(comprobar_num(input("Introduce una renta válida: ")))
+            num = float(comprobar_num(input("Introduce una renta válida: ").replace(" ","")))
     return num
             
       

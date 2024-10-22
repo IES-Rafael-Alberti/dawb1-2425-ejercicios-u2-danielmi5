@@ -11,7 +11,7 @@ def comprobar_puntuación(num):
     # Compruebo si la puntuación está dentro del rango
     while num > 0 and num < 0.4 or num>0.4 and num<0.6 or num > 1 :
         print("**ERROR** -> Puntuación fuera del rango")
-        num = input ("Introduce una puntuación válida: ")
+        num = input ("Introduce una puntuación válida: ").replace(" ","")
         num = comprobar_num(num)
     return num
     
@@ -23,7 +23,7 @@ Inaceptable	| 0.0
 Aceptable	| 0.4
 Meritorio	| 0.6 o más (hasta 1)
 """)
-    puntuacion = comprobar_num(input("Introduce tu puntación: "))
+    puntuacion = comprobar_num(input("Introduce tu puntación: ").replace(" ",""))
     nivel = ""
     cantidad = 0
     puntuacion = comprobar_puntuación(puntuacion)

@@ -5,11 +5,11 @@ def comprueba_edad(num: int):
     if num < 0:
         while num < 0: 
             print ("*Error*")
-            num = comprobar_num(input("Introduce una edad valida: "))
+            num = comprobar_num(input("Introduce una edad valida: ").replace(" ",""))
     return num
   
 def main():
-    edad = input("Introduce la edad del cliente:")
+    edad = input("Introduce la edad del cliente:").replace(" ","")
     edad = comprueba_edad(comprobar_num(edad))
     if edad < 4:
        print ("Tiene",edad,"años, puede entrar gratis.")
