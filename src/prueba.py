@@ -1,4 +1,10 @@
-from mi_libreria import comprobar_num, es_decimal
-num = "hola"
-num = comprobar_num(num)
-print(type(num))
+num = input("Introduce")
+contador = 0
+terminar = False
+eco = ""
+
+while num.lower() != "salir":
+    eco += num + " "
+    print(eco)
+    num = input("Introduce otro")
+    

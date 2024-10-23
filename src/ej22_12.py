@@ -1,6 +1,7 @@
 #Escribir un programa en el que se pregunte al usuario por una frase y una letra, y muestre por pantalla el número de veces que aparece la letra en la frase.
 #compruebo si la letra es solamente una letra y si es una letra (Con el respectivo bucle para que vuelva a pedir)
 def comprobar_letra(letra: str) -> str:
+    letra = letra.lower()
     while len(letra) != 1 or (not letra >= "a" and letra <= "z"):
         letra = input("Introduce una LETRA: ").replace(" ","")
     return letra    
@@ -15,7 +16,8 @@ def pedir_cadena():
 
 #cuenta el número de letras de la cadena
 def contar_letra(cadena: str, letra: str) -> int:
-    num_letras = cadena.count(letra)
+    cadena = cadena.lower()
+    num_letras = cadena.count(letra.lower())
     return num_letras
 
 def main():
