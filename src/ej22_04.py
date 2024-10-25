@@ -4,7 +4,7 @@ from mi_libreria import comprobar_entero
 def pedir_entero():
     entero = input("").replace(" ","")
     return comprobar_positivo(comprobar_entero(entero))
-
+# comprueba si es positivo, si no lo es, bucle hasta q sí
 def comprobar_positivo(entero):
     if entero < 0 :
        while entero <0:
@@ -14,16 +14,19 @@ def comprobar_positivo(entero):
     else:
         pass
     return entero
-def mostrar_cuentra_atras(entero):
+#
+def obtener_cuentra_atras(entero):
+    cuenta_atras = ""
     for i in range(entero,0 - 1, -1):
-            if i == 0:
-                print (i)
+            if i == entero:
+                cuenta_atras += str(i)
             else:    
-                print (i, end =", ")
+                cuenta_atras += str(i) + ", "
 
 def main():
     print ("Introduce un número entero positivo:",end=" ")
     entero = pedir_entero()
-    mostrar_cuentra_atras(entero)
+    cuenta_atras= obtener_cuentra_atras(entero)
+    print (cuenta_atras)
 if __name__ == "__main__":
     main()

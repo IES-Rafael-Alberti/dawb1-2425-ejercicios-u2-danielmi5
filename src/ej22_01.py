@@ -4,6 +4,7 @@ def pedir_cadena():
     return cadena
 def main():
     cadena = pedir_cadena()
+    # imprime la cadena y un salto de línea 10 veces
     print ((cadena+"\n")*10)
 
 if __name__ == "__main__":

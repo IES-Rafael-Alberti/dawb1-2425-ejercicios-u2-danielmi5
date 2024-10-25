@@ -4,7 +4,7 @@ from mi_libreria import comprobar_entero
 def pedir_edad():
     edad = input("").replace(" ","")
     return comprobar_edad(comprobar_entero(edad))
-
+# mira si la edad no es válida
 def comprobar_edad(edad):
     if edad <= 0 or edad > 125:
        while edad <= 0 or edad > 125:
@@ -14,16 +14,22 @@ def comprobar_edad(edad):
     else:
         pass
     return edad
-def mostrar_anios(edad):
+# guarda en una variable los años cumplidos
+def obtener_anios(edad: int) -> str:
+    anios = ""
+    # recorre todos los números hasta su edad (desde 1)
     for i in range(1,edad+1):
+            # si el ultimo año es el dado, no añade la coma
             if i == edad:
-                print (i)
-            else:    
-                print (i, end ="-")
+                anios += (str(i))
+            else:  # de lo contario, añade la coma 
+                anios += str(i) + "-"
+    return anios
 
 def main():
     print ("¿Cuál es tu edad?")
     edad = pedir_edad()
-    mostrar_anios(edad)
+    anios = obtener_anios(edad)
+    print ("Los años que ha cumplido:",anios)
 if __name__ == "__main__":
     main()
