@@ -34,6 +34,7 @@ def mostrar_anios(edad: int):
 
 def main():
     edad = pedir_edad()
+    validar_edad(edad)
     if edad is not None:
         mostrar_anios(edad)
         
