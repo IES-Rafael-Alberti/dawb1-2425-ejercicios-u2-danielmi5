@@ -15,13 +15,10 @@ def es_primo(entero: int) -> bool:
     elif entero != 2 and entero % 2 == 0:
         return False
     else:
-        terminar = False
         for i in range(3, int(math.sqrt(entero)) + 1, 2):
             if entero % i == 0:
-                terminar = True
                 return False
-        if terminar == False:
-            return True
+        return True
     
          
 
