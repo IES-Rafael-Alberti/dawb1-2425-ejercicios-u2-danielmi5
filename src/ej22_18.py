@@ -1,7 +1,7 @@
 #Solicitar al usuario que ingrese números enteros positivos y, por cada uno, imprimir la suma de los dígitos que lo componen. La condición de corte es que se ingrese el número -1. Al finalizar, mostrar cuántos de los números ingresados por el usuario fueron números pares.
 from mi_libreria import comprobar_entero
 # guarda la suma en una variable "suma" y la retorna cuando se introduzca -1
-def suma_digito(entero: int) -> int:
+def suma_digito(entero: int) -> str:
     pares = ""
     while entero != -1 :
         suma = 0
@@ -14,7 +14,7 @@ def suma_digito(entero: int) -> int:
     
     return str(pares)
 
-def guarda_pares(entero: int, pares: int) -> bool:
+def guarda_pares(entero: int, pares: int) -> int:
     if entero % 2 == 0:
         entero = str(entero) + ", "
         pares += entero

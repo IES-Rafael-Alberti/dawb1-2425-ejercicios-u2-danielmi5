@@ -1,2 +1,0 @@
-palabra = ""
-print (len(palabra))

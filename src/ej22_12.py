@@ -8,7 +8,7 @@ def comprobar_letra(letra: str) -> str:
 
 def pedir_letra():
     letra = input("").replace(" ","")
-    return comprobar_letra(letra)
+    return letra
 
 def pedir_cadena():
     cadena = input("")
@@ -24,7 +24,7 @@ def main():
     print("Introduce una frase:", end=" ")
     cadena = pedir_cadena()
     print("Introduce una letra:", end=" ")
-    letra = pedir_letra()
+    letra = comprobar_letra(pedir_letra())
     num_letras = contar_letra(cadena, letra)
     print (f"El número de {letra} es {num_letras}")
 if __name__ == "__main__":

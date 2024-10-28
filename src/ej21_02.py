@@ -3,16 +3,6 @@ def comprobar_contraseña(respuesta: str) -> bool:
     #Transformo la respuesta en minúsculas para que coincida con la contraseña en caso de haber puesto mayúsculas
     respuesta = respuesta.lower()
     contraseña = "contraseña"
-    intentos = 3
-    while respuesta != contraseña and intentos > 0:
-        print("Contraseña equivocada")
-        if intentos == 1:
-            # Cuando el intentos esté en el ultimo intento no quiero que haga nada, por eso el pass. 
-            pass
-        else:
-            respuesta = input("Intentalo de nuevo: ").replace(" ","")
-        respuesta = respuesta.lower()
-        intentos -= 1
     
     if respuesta == contraseña:
         return True
