@@ -1,7 +1,7 @@
 #Escribir un programa que pida al usuario dos números y muestre por pantalla su división. Si el divisor es cero el programa debe mostrar un error.
 def es_decimal(num: str) -> bool:
     # si tiene mas de un punto es una cadena
-    if num.count(".") > 1:
+    if num.count(".") > 1 or num.count(".") == 0:
         return False
    
     else: #puede ser decimal

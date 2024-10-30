@@ -1,6 +1,6 @@
 #Escribir un programa que muestre el eco de todo lo que el usuario introduzca hasta que el usuario escriba “salir” que terminará.
 def pedir_cadena():
-    cadena = input("").replace(" ")
+    cadena = input("").replace(" ","")
     return cadena
 
 def mostrar_eco(cadena):
@@ -16,6 +16,7 @@ def mostrar_eco(cadena):
         cadena = input("Introduce otra cadena ('salir' para terminar): ").replace(" ","")
         # cuando salga salir termina
         terminar = terminar_programa(cadena)
+    return (eco).strip() # modificación para comprobar en el test
         
 def terminar_programa(cadena: str) -> bool:
     if cadena.lower() == "salir":
