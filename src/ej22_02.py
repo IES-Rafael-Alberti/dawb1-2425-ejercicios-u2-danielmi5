@@ -4,15 +4,13 @@ from mi_libreria import comprobar_entero
 def pedir_edad():
     edad = input("").replace(" ","")
     return comprobar_edad(comprobar_entero(edad))
-# mira si la edad no es válida
+# mira si la edad es válida, si no bucle hasta que sí. Retorna el num
 def comprobar_edad(edad):
     if edad <= 0 or edad > 125:
        while edad <= 0 or edad > 125:
            print("**ERROR** -> Introduce una edad válida:")
            edad = input("").replace(" ","")
            edad = comprobar_entero(edad)
-    else:
-        pass
     return edad
 # guarda en una variable los años cumplidos
 def obtener_anios(edad: int) -> str:

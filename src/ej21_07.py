@@ -8,6 +8,7 @@
 ##Más de 60000€	          45%
 #Escribir un programa que pregunte al usuario su renta anual y muestre por pantalla el tipo impositivo que le corresponde.
 from mi_libreria import comprobar_num
+# comprueba si la renta es válida, si no bucle hasta que sí
 def comprueba_renta(num: float):
     if num < 0:
         while num < 0: 
@@ -19,6 +20,7 @@ def comprueba_renta(num: float):
 def main():
     renta = input("Introduce tu renta: ").replace(" ","")
     renta = comprueba_renta(comprobar_num(renta))
+    # Imprime la cadena dependiendo de la renta y cambia el tiempo impositivo, 
     if renta < 10000:
         print("Tu renta es de",renta,"€ y te corresponde un tipo impositivo de 5%")
     elif renta >= 10000 and renta < 20000:

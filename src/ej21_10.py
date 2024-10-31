@@ -3,9 +3,8 @@
 ##Ingredientes no vegetarianos: Peperoni, Jamón y Salmón.
 
 #Escribir un programa que pregunte al usuario si quiere una pizza vegetariana o no, y en función de su respuesta le muestre un menú con los ingredientes disponibles para que elija. Solo se puede eligir un ingrediente además de la mozzarella y el tomate que están en todas la pizzas. Al final se debe mostrar por pantalla si la pizza elegida es vegetariana o no y todos los ingredientes que lleva.
-
+# compruebo si es una afirmación (controlo si es "sí" o "si") o negación, si no es niguna, bucle hasta que sí sea.. Al final lo retorna
 def comprobar_respuesta(entrada: str):
-    # compruebo si es una afirmación o negación, si no lo es, bucle hasta que sí sea
     afirmacion = ["si","sí"]
     negacion = "no"
     respuesta = None
@@ -17,6 +16,7 @@ def comprobar_respuesta(entrada: str):
         
     return entrada
 
+# introduce el menú de la pizza según la respuesta.
 def introducir_menu(entrada: str):
     entrada = comprobar_respuesta(entrada).lower()
     
@@ -29,9 +29,9 @@ Mozzarella, tomate y un ingrediente a tu elección (Pimiento o tofu).
         print("""Menú no vegetariano, ingredientes disponibles:
 Mozzarella, tomate y un ingrediente a tu elección (Peperoni, jamón o salmón).
 """)
-        
+
+# compruebo si la elección esté dentro del rango, si no lo es, bucle hasta que sí sea        
 def comprobar_elección(eleccion: str, ingredientes_vegetarianos: list, ingredientes_no_vegetarianos: list):
-    # compruebo si la elección esté dentro del rango, si no lo es, bucle hasta que sí sea
     
     # la eleción en minusculas por si añade mayúsculas
     eleccion = eleccion.lower()
@@ -54,9 +54,11 @@ def main():
     
     eleccion = input("Elige ingrediente: ").replace(" ","")
     eleccion = comprobar_elección(eleccion, ingredientes_vegetarianos, ingredientes_no_vegetarianos)
-    if eleccion in ingredientes_vegetarianos:
+    if eleccion in ingredientes_vegetarianos: # Sí la elección está en.... imprime eso
         print(f"La pizza es vegetariana y los ingredientes son: Mozzarella, tomate y {eleccion}.")
-    elif eleccion in ingredientes_no_vegetarianos:
+    elif eleccion in ingredientes_no_vegetarianos:# Si la elección 
          print(f"La pizza no es vegetariana y los ingredientes son: Mozzarella, tomate y {eleccion}.")
+    else: # Como la elección ya está controlada para que sea uno de los ingredientes, no hace falta el else...
+        pass
 if __name__ == "__main__":
     main()

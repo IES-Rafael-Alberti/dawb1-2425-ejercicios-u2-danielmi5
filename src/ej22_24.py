@@ -9,9 +9,9 @@ def pedir_entero():
     entero = input("Introduce un número entero (0 para terminar): ").replace(" ", "") # elimina espacios
     entero = comprobar_entero(entero)
     
-    if entero == 0:
+    if entero == 0: # Si es 0
         return None  # Devuelve None para terminar el bucle en main
-    else: 
+    else: # Si no retorna el entero
         return entero
         
 

@@ -6,14 +6,16 @@ def suma_digito(entero: int) -> str:
     while entero != -1 :
         suma = 0
         pares = guarda_pares(entero, pares)
-        #le asigno entre 0 y la longitud del número (como no funciona con int lo conviero a str)
+        #le asigno entre 0 y la longitud del número (como no funciona con int lo convierto a str)
         for i in range (0,len(str(entero))):
+            # va sumando a una variable (suma = 0) cada dígito
             suma += int(str(entero)[i])
         print (f"La suma de todos los dígitos de {entero} es:",suma)
         entero = pedir_entero()
     
     return str(pares)
 
+# en una cadena (pares) añade cada par y retorna la cadena con todos los pares
 def guarda_pares(entero: int, pares: int) -> int:
     if entero % 2 == 0:
         entero = str(entero) + ", "

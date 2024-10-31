@@ -10,7 +10,7 @@ def comprueba_mayor(entero):
         entero = pedir_entero()
     return mayor
 
-# comprueba si el entero leído es negativo
+# comprueba si el entero leído es negativo, si no bucle hasta que sí. Al final retorna el número.
 def comprobar_negativo(entero):
     while entero < 0 : 
         entero = input("Debes introducir un número entero positivo: ")
@@ -21,6 +21,7 @@ def comprobar_negativo(entero):
 def pedir_entero():
     entero = input("Introduce un entero positivo ('0' para terminar): ").replace(" ","")
     return comprobar_negativo(comprobar_entero(entero))
+
 def main():
     entero = pedir_entero()
     print (comprueba_mayor(entero), "es el número mayor.")

@@ -18,7 +18,9 @@ def mostrar_eco(cadena):
         terminar = terminar_programa(cadena)
     return (eco).strip() # modificación para comprobar en el test
         
+# Comprueba si la cadena es "salir" (para terminar el programa). Si lo es retorna True, si no retorna False.
 def terminar_programa(cadena: str) -> bool:
+
     if cadena.lower() == "salir":
         return True
     else:

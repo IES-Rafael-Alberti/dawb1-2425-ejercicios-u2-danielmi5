@@ -1,14 +1,15 @@
 #Escribir un programa que pida al usuario un número entero y muestre por pantalla un triángulo rectángulo como el de más abajo, de altura el número introducido.
 from mi_libreria import comprobar_entero
+# pide entero y retorna el número comprobado.
 def pedir_entero():
     entero = input("").replace(" ","")
     return comprobar_positivo(comprobar_entero(entero))
-# comprueba si la altura es positivo, si no bucle hasta que sí.
+# comprueba si es positivo, si no bucle hasta que sí. Al final la retorna
 def comprobar_positivo(entero):
     if entero < 0 :
        while entero <0:
            print("**ERROR** -> Introduce una altura válida:")
-           entero = input("").replace(" ","")
+           entero = input("").replace(" ","") # elimno espacios
            entero = comprobar_entero(entero)
     else:
         pass

@@ -10,7 +10,7 @@ def suma(entero):
         
 # pide entero y retorna la variable comprobada si es un entero
 def pedir_entero():
-    entero = input("Introduce un entero ('0' para terminar): ").replace(" ","")
+    entero = input("Introduce un entero ('0' para terminar): ").replace(" ","")# elimina espacios
     return comprobar_entero(entero)
 
 def main():

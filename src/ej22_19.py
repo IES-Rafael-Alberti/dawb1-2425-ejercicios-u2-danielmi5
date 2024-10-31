@@ -4,16 +4,16 @@
 def elegir_opcion():
     opcion = input ("Introduce una opción (1, 2 o 3): ").replace(" ","")
     return comprobar_opcion(opcion)
-#comprueba si la opcion es 1, 2 o 3, si no bucle hasta que sí
+#comprueba si la opcion es 1, 2 o 3, si no bucle hasta que sí. Al final retorna la opción.
 def comprobar_opcion(opcion):
-    valida = False
+    valida = False # variable para controlar el bucle
     while valida == False:
         if opcion == "1":
-            valida = True
+            valida = True # cambia el valor para terminar el bucle
         elif opcion == "2":
-            valida = True
+            valida = True # cambia el valor para terminar el bucle
         elif opcion == "3":
-            valida = True
+            valida = True # cambia el valor para terminar el bucle
         else: 
             print ("**ERROR** -> Opción no válida")
             opcion = input("Debes introducir una opción válida (1, 2 o 3): ").replace(" ","")
@@ -21,8 +21,8 @@ def comprobar_opcion(opcion):
 
 def main():
     menu = "Este es el menú:\n1: Comenzar programa\n2: Imprimir listado\n3: Finalizar programa"
-    seguir = True
-    # mientras la opcion sea 1 o 2 vuele a pedir otra opcion, si es 3 termina
+    seguir = True # variable para controlar el bucle 
+    # mientras la opcion sea 1 o 2 vuelve a pedir otra opcion, si es 3 termina
     while seguir == True:
         print(menu)
         print("") #Para que no se vea tan pegado el menú con elegir_opcion (salto de linea))
@@ -35,6 +35,6 @@ def main():
             print("") #Para que no se vea tan pegado el menú con el texto impreso (salto de linea)
         else:
             print ("Finalizando programa...")
-            seguir = False
+            seguir = False # se camabia a 3 para terminar el bucle
 if __name__ == "__main__":
     main()

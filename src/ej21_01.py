@@ -1,4 +1,6 @@
 #Escribir un programa que pregunte al usuario su edad y muestre por pantalla si es mayor de edad o no.
+
+#Comprueba si la cadena es un número. Si no lo es, bucle hasta que sí. Retorna el número 
 def comprobar_num(num: str) -> int:
   if num.isdigit() == True:   
     return int(num)
@@ -8,6 +10,7 @@ def comprobar_num(num: str) -> int:
       num = input("Debes introducir un número entero (positivo): ").replace(" ","")
       if num.isdigit() == True:
         return int(num)
+# si es mayor de edad, retorna una cosa. Si no, retorna otra.
 def comprobar_edad(num):
   salida = ""
   if num >= 18:

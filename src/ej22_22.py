@@ -1,14 +1,16 @@
 # Crear un programa que solicite el ingreso de números enteros positivos, hasta que el usuario ingrese el 0. Por cada número, informar cuántos dígitos pares y cuántos impares tiene. Al finalizar, informar la cantidad de dígitos pares y de dígitos impares leídos en total
 from mi_libreria import comprobar_entero
-#comprueba si es positivo, si no bucle hasta q sí
+#replace para elimar espacios
+
+#comprueba si es positivo, si no bucle hasta q sí introduca uno positivo. Al final retorna num
 def comprobar_positivo(num: str) -> int:
     if num < 0:
         while num < 0 :
             print ("**ERROR** => Debes introducir un número positivo")
-            num = comprobar_entero(input("Introducir número entero positivo: "))
+            num = comprobar_entero(input("Introducir número entero positivo: ")).replace(" ","")
     return num
             
-# pide el num y con las funciones comprobar por si hay algun error
+# pide el num y con las funciones comprobar por si hay algun error. Si el num es 0 retorna None para el bucle
 def pedir_entero():
     entero = input("Introducir número entero positivo: ").replace(" ","")
     entero = comprobar_entero(entero)
@@ -27,9 +29,6 @@ def contar_pares_e_impares(num):
         else: 
             contador_impares += 1
     return contador_pares, contador_impares
-
-
-    
     
 def main():
     entero = pedir_entero()
