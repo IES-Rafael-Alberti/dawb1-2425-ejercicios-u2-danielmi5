@@ -1,5 +1,6 @@
 import pytest 
 from src.ej24_01 import ordenar_lista, comprobar_lista_ordenada
+# assert: comprueba si la salida de la función es == a la impuesta
 
 @pytest.mark.parametrize(
     "lista, lista_ordenada",

@@ -1,6 +1,6 @@
 import pytest 
 from src.ej22_12 import pedir_cadena, pedir_letra, comprobar_letra, contar_letra
-
+# assert: comprueba si la salida de la función es == a la impuesta
 
 
 def test_pedir_cadena(monkeypatch):
@@ -22,6 +22,7 @@ def test_pedir_letra(monkeypatch):
 
 def test_comprobar_letra(monkeypatch, letra, retorno):
     entradas = iter(letra)  # Crea un iterador de entradas
+    # monkeypatch simula el input en la función comprobar_letra con variable "entradas" de letra
     monkeypatch.setattr('builtins.input', lambda _: next(entradas)) # el next lo que hace es q cambia a la prox variable
     resultado = comprobar_letra("")
     assert resultado == retorno

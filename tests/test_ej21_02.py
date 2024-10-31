@@ -1,5 +1,6 @@
 import pytest 
 from src.ej21_02 import comprobar_contraseña
+# assert: comprueba si la salida de la función es == a la impuesta
 
 @pytest.mark.parametrize(
     "contraseña, bool",

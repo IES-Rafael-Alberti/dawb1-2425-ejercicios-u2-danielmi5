@@ -1,8 +1,9 @@
 import pytest 
 from src.ej22_23 import pedir_libro, comprobar_libro, contar_digitos_libro
-
+# assert: comprueba si la salida de la función es == a la impuesta
 
 def test_pedir_frase(monkeypatch):
+    # monkeypatch simula el input en la función pedir_libro con esa cadena de prueba "Los 3 mosqueteros" de num
     monkeypatch.setattr('builtins.input', lambda _: "    Los 3 mosqueteros   ")
     assert pedir_libro() == "Los 3 mosqueteros"
 

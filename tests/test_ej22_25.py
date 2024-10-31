@@ -1,7 +1,9 @@
 import pytest 
 from src.ej22_25 import pedir_frase, contar_num_palabras, encontrar_palabra_mas_larga
+# assert: comprueba si la salida de la función es == a la impuesta
 
 def test_pedir_frase(monkeypatch):
+    # monkeypatch simula el input en la función pedir_frase con la cadena "hola buenas tardes"
     monkeypatch.setattr('builtins.input', lambda _: "   hola buenas tardes  ")
     assert pedir_frase() == "hola buenas tardes"
 

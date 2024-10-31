@@ -1,6 +1,6 @@
 import pytest 
 from src.ej22_11 import invertir_cadena, pedir_cadena
-# Código modificado para que pueda funcionar el test recibiendo datos
+# assert: comprueba si la salida de la función es == a la impuesta
 
 @pytest.mark.parametrize(
     "input, cadena",
@@ -11,6 +11,7 @@ from src.ej22_11 import invertir_cadena, pedir_cadena
     ]
 )
 def test_pedir_cadena(monkeypatch,input, cadena):
+    # monkeypatch simula el input en la función pedir_cadena con variable "input"
     monkeypatch.setattr('builtins.input', lambda __ : input)
     assert pedir_cadena() == cadena
     

@@ -1,5 +1,6 @@
 import pytest 
 from src.ej21_03 import comprobar_num, comprobar_division, es_decimal
+# assert: comprueba si la salida de la función es == a la impuesta
 
 @pytest.mark.parametrize(
     "num, booleano",
@@ -37,6 +38,7 @@ def test_comprobar_division(num, divisor, retorno):
 
 def test_comprobar_num(monkeypatch, num, retorno):
     entradas = iter(num)  # Crea un iterador de entradas
+    # monkeypatch simula el input en la función comprobar_num con variable "entradas" de num
     monkeypatch.setattr('builtins.input', lambda _: next(entradas)) # el next lo que hace es q cambia a la prox variable
     assert comprobar_num("") == retorno
 
