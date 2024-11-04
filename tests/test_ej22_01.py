@@ -3,7 +3,7 @@ from src.ej22_01 import pedir_cadena
 # assert: comprueba si la salida de la función es == a la impuesta
 
 @pytest.mark.parametrize(
-    "inpuut, cadena",
+    "input, cadena",
     [
         ("hola","hola"),
         ("B u e n a     s  ","Buenas"), 
